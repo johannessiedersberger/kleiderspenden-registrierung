@@ -1,25 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import FrontPage from './components/frontpages/FrontPage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+import { ChakraProvider } from '@chakra-ui/react'
+import Imprint from './components/legalpages/Imprint';
+import FormPage from './components/formpages/FormPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<FrontPage />} />
+          <Route path="/impressum" element={<Imprint />} />
+          <Route path="/spenden" element={<FormPage />} />
+        </Routes>
+      </BrowserRouter>
+    </ChakraProvider>
   );
 }
 
