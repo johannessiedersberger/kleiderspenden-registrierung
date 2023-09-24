@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.db798329.css",
+    "main.js": "/static/js/main.8d031105.js",
+    "static/js/787.0181f435.chunk.js": "/static/js/787.0181f435.chunk.js",
+    "static/media/Kleiderspenden.svg": "/static/media/Kleiderspenden.e650a8c19022713775f4585dd8ebac72.svg",
+    "index.html": "/index.html",
+    "main.db798329.css.map": "/static/css/main.db798329.css.map",
+    "main.8d031105.js.map": "/static/js/main.8d031105.js.map",
+    "787.0181f435.chunk.js.map": "/static/js/787.0181f435.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db798329.css",
+    "static/js/main.8d031105.js"
+  ]
+}
