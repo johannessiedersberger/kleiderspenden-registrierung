@@ -62,7 +62,7 @@ const Header = () => {
                         <Box><YourSvg style={{ height: "50px", width: "50px" }} /></Box>
                         <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
                             {Links.map((link) => (
-                                <NavLink url={link.url}>{link.label}</NavLink>
+                                <NavLink key={link.label} url={link.url}>{link.label}</NavLink>
                             ))}
                         </HStack>
                     </HStack>
@@ -73,7 +73,7 @@ const Header = () => {
                     <Box pb={4} display={{ md: 'none' }}>
                         <Stack as={'nav'} spacing={4}>
                             {Links.map((link) => (
-                                <NavLink url={link.url}>{link.label}</NavLink>
+                                <NavLink key={link.label} url={link.url}>{link.label}</NavLink>
                             ))}
                         </Stack>
                     </Box>

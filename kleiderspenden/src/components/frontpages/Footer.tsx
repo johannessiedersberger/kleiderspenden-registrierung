@@ -29,10 +29,7 @@ const Footer = () => {
                 <Text>© 2023 Kleiderspenden e.V. All rights reserved</Text>
                 <Stack direction={'row'} spacing={4}>
                     <Link href='/impressum'>
-                        Impressum
-                    </Link>
-                    <Link href='/datenschutz'>
-                        Datenschutz
+                        Impressum / Datenschutz
                     </Link>
                 </Stack>
             </Container>

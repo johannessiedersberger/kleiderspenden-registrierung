@@ -31,7 +31,7 @@ const FrontPage = () => {
                         fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
                         lineHeight={'110%'}>
                         Kleidung Spenden <br />
-                        <Text as={'span'} color={'green.400'}>
+                        <Text as={'span'} color={'blue.400'}>
                             für Hilfsprojekte
                         </Text>
                     </Heading>
@@ -47,13 +47,13 @@ const FrontPage = () => {
                         position={'relative'}>
                         <Button
                             colorScheme={'green'}
-                            bg={'green.400'}
+                            bg={'blue.400'}
                             rounded={'full'}
                             px={6}
                             as={'a'}
                             href="/spenden"
                             _hover={{
-                                bg: 'green.500',
+                                bg: 'blue.500',
                             }}>
                             Jetzt Spenden
                         </Button>
