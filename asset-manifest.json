@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/kleiderspenden-registrierung/static/css/main.db798329.css",
-    "main.js": "/kleiderspenden-registrierung/static/js/main.ebdb1566.js",
+    "main.js": "/kleiderspenden-registrierung/static/js/main.bf426804.js",
     "static/js/787.0181f435.chunk.js": "/kleiderspenden-registrierung/static/js/787.0181f435.chunk.js",
     "static/media/Kleiderspenden.svg": "/kleiderspenden-registrierung/static/media/Kleiderspenden.e650a8c19022713775f4585dd8ebac72.svg",
     "index.html": "/kleiderspenden-registrierung/index.html",
     "main.db798329.css.map": "/kleiderspenden-registrierung/static/css/main.db798329.css.map",
-    "main.ebdb1566.js.map": "/kleiderspenden-registrierung/static/js/main.ebdb1566.js.map",
+    "main.bf426804.js.map": "/kleiderspenden-registrierung/static/js/main.bf426804.js.map",
     "787.0181f435.chunk.js.map": "/kleiderspenden-registrierung/static/js/787.0181f435.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.db798329.css",
-    "static/js/main.ebdb1566.js"
+    "static/js/main.bf426804.js"
   ]
 }
