@@ -18,6 +18,8 @@ import {
     Radio, FormHelperText, FormErrorMessage, useToast
 } from '@chakra-ui/react';
 import { useStore } from '../../App';
+import { Link as RouterLink } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const FormPage = () => {
 
@@ -29,6 +31,8 @@ const FormPage = () => {
     const [city, setCity] = useState('');
 
     const toast = useToast();
+
+    const navigate = useNavigate();
 
     const addDonation = useStore(state => state.setDonation);
 
@@ -114,13 +118,8 @@ const FormPage = () => {
 
             addDonation(donationValues);
 
+            navigate("/bestaetigung");
 
-
-
-
-
-
-            window.location.href = "/bestaetigung";
         }
     }
 
@@ -210,6 +209,7 @@ const FormPage = () => {
                                 )
                             }
                             <Stack spacing={10}>
+
                                 <Button
                                     bg={'blue.400'}
                                     color={'white'}
@@ -220,6 +220,7 @@ const FormPage = () => {
                                 >
                                     Spende Bestätigen
                                 </Button>
+
                             </Stack>
                         </Stack>
                     </Box>

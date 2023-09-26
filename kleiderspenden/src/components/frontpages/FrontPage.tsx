@@ -1,7 +1,5 @@
 import React from "react";
 import Header from "./Header";
-
-
 import {
     Box,
     Heading,
@@ -14,6 +12,7 @@ import {
     createIcon,
 } from '@chakra-ui/react'
 import Footer from "./Footer";
+import { Link as RouterLink } from "react-router-dom";
 
 const FrontPage = () => {
 
@@ -45,19 +44,21 @@ const FrontPage = () => {
                         align={'center'}
                         alignSelf={'center'}
                         position={'relative'}>
-                        <Button
-                            colorScheme={'green'}
-                            bg={'blue.400'}
-                            rounded={'full'}
-                            px={6}
-                            as={'a'}
-                            href="/spenden"
-                            _hover={{
-                                bg: 'blue.500',
-                            }}>
-                            Jetzt Spenden
-                        </Button>
 
+                        <RouterLink to="/spenden">
+                            <Button
+                                colorScheme={'green'}
+                                bg={'blue.400'}
+                                rounded={'full'}
+                                px={6}
+                                as={'a'}
+
+                                _hover={{
+                                    bg: 'blue.500',
+                                }}>
+                                Jetzt Spenden
+                            </Button>
+                        </RouterLink>
                         <Box>
                             <Icon
                                 as={Arrow}
@@ -74,7 +75,6 @@ const FrontPage = () => {
                                 right={'-125px'}
                                 top={'-15px'}
                                 transform={'rotate(10deg)'}>
-
                             </Text>
                         </Box>
                     </Stack>

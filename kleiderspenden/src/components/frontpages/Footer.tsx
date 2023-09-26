@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { ReactNode } from 'react';
 import styled from 'styled-components';
+import { Link as RouterLink } from "react-router-dom";
 
 const Footer = () => {
 
@@ -28,9 +29,11 @@ const Footer = () => {
                 align={{ base: 'center', md: 'center' }}>
                 <Text>© 2023 Kleiderspenden e.V. All rights reserved</Text>
                 <Stack direction={'row'} spacing={4}>
-                    <Link href='/impressum'>
-                        Impressum / Datenschutz
-                    </Link>
+                    <RouterLink to="/impressum">
+                        <Link>
+                            Impressum / Datenschutz
+                        </Link>
+                    </RouterLink>
                 </Stack>
             </Container>
         </Box>

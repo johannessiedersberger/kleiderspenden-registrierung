@@ -28,6 +28,8 @@ import {
     TableContainer,
 } from '@chakra-ui/react';
 import { useStore } from '../../App';
+import { useNavigate } from 'react-router-dom';
+
 
 const ConfirmationPage = () => {
 
@@ -35,10 +37,11 @@ const ConfirmationPage = () => {
 
     const deleteDonation = useStore((state) => state.removeDonation);
 
-    const reSubmitDonation = () => {
-        deleteDonation();
-        window.location.href = "/spenden";
+    const navigate = useNavigate();
 
+    const reSubmitDonation = () => {
+        navigate("/spenden");
+        deleteDonation();
     }
 
     return (
@@ -73,10 +76,11 @@ const ConfirmationPage = () => {
                                 <Tbody>
                                     {
                                         Object.keys(donation)?.map((value: string, index: number, array: string[]) => {
-                                            return (<Tr key={value}>
-                                                <Td>{value}</Td>
-                                                <Td>{Object.values(donation)[index]!.toString()}</Td>
-                                            </Tr>)
+                                            return (
+                                                <Tr key={value}>
+                                                    <Td>{value}</Td>
+                                                    <Td>{Object.values(donation)[index]!.toString()}</Td>
+                                                </Tr>)
                                         })
                                     }
                                 </Tbody>

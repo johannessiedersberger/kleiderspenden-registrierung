@@ -18,7 +18,8 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 
-import { ReactComponent as YourSvg } from '../../images/Kleiderspenden.svg';
+import { ReactComponent as LogoSvg } from '../../images/Kleiderspenden.svg';
+import { Link } from "react-router-dom";
 
 
 
@@ -28,18 +29,20 @@ const NavLink = (props: any) => {
     const { children } = props
 
     return (
-        <Box
-            as="a"
-            px={2}
-            py={1}
-            rounded={'md'}
-            _hover={{
-                textDecoration: 'none',
-                bg: useColorModeValue('gray.200', 'gray.700'),
-            }}
-            href={props.url}>
-            {children}
-        </Box>
+        <Link to={props.url}>
+            <Box
+                as="a"
+                px={2}
+                py={1}
+                rounded={'md'}
+                _hover={{
+                    textDecoration: 'none',
+                    bg: useColorModeValue('gray.200', 'gray.700'),
+                }}
+            >
+                {children}
+            </Box>
+        </Link>
     )
 }
 
@@ -59,7 +62,9 @@ const Header = () => {
                         onClick={isOpen ? onClose : onOpen}
                     />
                     <HStack spacing={8} alignItems={'center'}>
-                        <Box><YourSvg style={{ height: "50px", width: "50px" }} /></Box>
+                        <Box as="a" href={'/'}>
+                            <LogoSvg style={{ height: "50px", width: "50px" }} />
+                        </Box>
                         <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
                             {Links.map((link) => (
                                 <NavLink key={link.label} url={link.url}>{link.label}</NavLink>
@@ -83,19 +88,5 @@ const Header = () => {
     )
 };
 
-
-
-interface NavItem {
-    label: string
-    subLabel?: string
-    children?: Array<NavItem>
-    href?: string
-}
-
-const NAV_ITEMS: Array<NavItem> = [
-    {
-        label: "Home"
-    }
-]
 
 export default Header;
